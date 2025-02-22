@@ -6,7 +6,7 @@
          alt="GitHub last commit"></a>
     <img src="https://img.shields.io/github/contributors/truonghienminh-HCMUT/BTL-Linear?color=blue&logo=github&logoColor=green&style=for-the-badge" alt="GitHub contributors">
     <img src="https://img.shields.io/github/directory-file-count/truonghienminh-HCMUT/BTL-Linear?type=file&logo=files&logoColor=white&style=for-the-badge" alt="GitHub files">
-    <img scr="https://img.shields.io/github/commit-activity/w/truonghienminh-HCMUT/BTL-Linear?style=for-the-badge&logo=git-extensions&logoColor=red" alt="GitHub activity">
+    <img scr="https://img.shields.io/github/commit-activity/t/truonghienminh-HCMUT/BTL-Linear?style=for-the-badge&logo=git-extensions&logoColor=red" alt="GitHub activity">
 </div>
 
 # ℹ Thông tin
