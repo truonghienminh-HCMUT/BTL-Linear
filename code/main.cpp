@@ -53,7 +53,7 @@ vector<int> constructPath(int u, int v, const vector<vector<int>>& next){
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    io(true);
+    io(false);
 
     int V, E;
     cin >> V >> E;
