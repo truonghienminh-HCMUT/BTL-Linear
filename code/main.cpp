@@ -36,8 +36,7 @@ void floyd_warshall(int n, vector<vector<int>>& dist, vector<vector<int>>& next)
 
     FOR(u, 1, n + 1){
         for (auto& edge : adj[u]){
-            int v = edge.first;
-            int w = edge.second;
+            int v = edge.first, w = edge.second;
             dist[u][v] = min(dist[u][v], w);
             next[u][v] = v;
         }
@@ -80,10 +79,9 @@ signed main(){
 
     floyd_warshall(n, dist, next);
 
-    int t;
+    int t, u, v;
     cin >> t;
     while (t--){
-        int u, v;
         cin >> u >> v;
         if (dist[u][v] == INF)
             cout << "No path from " << u << " to " << v << ".\n";
