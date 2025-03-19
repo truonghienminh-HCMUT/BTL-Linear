@@ -1,6 +1,8 @@
 // TEST PASSED: code/main.cpp
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 #define pb push_back
