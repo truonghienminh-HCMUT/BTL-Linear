@@ -16,6 +16,18 @@ vector<pair<int, int>> adj[maxn];
 // int pre_unused[maxn];
 // bool visited_unused[maxn];
 
+// VARIABLE NAME EXPLANATION
+/*
+    n: number of vertices
+    m: number of edges
+    mode: 0 for undirected graph, 1 for directed graph
+    adj: adjacency list
+    dist: distance matrix
+    next: next matrix
+    t: number of queries
+    u, v: query vertices
+*/
+
 void inp(){
     cin >> n >> m >> mode;
     FOR(i, 0, m){
