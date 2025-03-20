@@ -104,7 +104,7 @@ signed main(){
         if (dist[u][v] == INF)
             cout << "No path from " << u << " to " << v << ".\n";
         else if (dist[u][v] < 0)
-            cout << "Negative cycle detected.\n";
+            cout << "Negative cycle detected.\n" << "(Value: " << dist[u][v] << ")\n";
         else{
             cout << "Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
             cout << "Path: ";
