@@ -11,17 +11,19 @@ using namespace std;
 #define io(a) if (a) freopen("input.txt", "r", stdin), freopen("output.txt", "w", stdout)
 
 const int maxn = 1e5 + 1, INF = 1e18;
-int n, m;
+int n, m, mode;
 vector<pair<int, int>> adj[maxn];
 // int pre_unused[maxn];
 // bool visited_unused[maxn];
 
 void inp(){
-    cin >> n >> m;
+    cin >> n >> m >> mode;
     FOR(i, 0, m){
         int x, y, w;
         cin >> x >> y >> w;
         adj[x].pb({y, w});
+        if (mode == 0)
+            adj[y].pb({x, w});
     }
 }
 
@@ -54,6 +56,7 @@ void floyd_warshall(int n, vector<vector<int>>& dist, vector<vector<int>>& next)
             }
         }
     }
+    
 }
 
 vector<int> reconstruct_path(int u, int v, const vector<vector<int>>& next){
@@ -82,11 +85,14 @@ signed main(){
     floyd_warshall(n, dist, next);
 
     int t, u, v;
+    cout << "Floyd-Warshall Algorithm for " << (mode == 0 ? "undirected" : "directed") << " graph.\n";
     cin >> t;
     while (t--){
         cin >> u >> v;
         if (dist[u][v] == INF)
             cout << "No path from " << u << " to " << v << ".\n";
+        else if (dist[u][v] < 0)
+            cout << "Negative cycle detected.\n";
         else{
             cout << "Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
             cout << "Path: ";
