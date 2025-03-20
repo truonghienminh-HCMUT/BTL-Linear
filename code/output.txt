@@ -1,5 +1,3 @@
-Floyd-Warshall Algorithm for undirected graph.
-Negative cycle detected.
-(Value: -283)
-Negative cycle detected.
-(Value: -488)
+Floyd-Warshall Algorithm for directed graph.
+Negative cycle detected. (Value: -13)
+Negative cycle detected. (Value: -28)
