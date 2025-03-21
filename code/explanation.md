@@ -17,7 +17,7 @@ Chương trình này triển khai thuật toán **Floyd-Warshall** để tìm đ
   - `dist[i][j]`: Lưu khoảng cách ngắn nhất từ nút `i` đến nút `j`.
   - `next[i][j]`: Lưu nút tiếp theo trên đường đi ngắn nhất từ `i` đến `j`.
 - Lặp qua tất cả các cặp nút và cập nhật khoảng cách ngắn nhất bằng thuật toán Floyd-Warshall:
-  - Nếu tìm thấy đường đi ngắn hơn qua một nút trung gian `k`, khoảng cách và nút tiếp theo sẽ được cập nhật.
+  - Nếu tìm thấy đường đi ngắn hơn qua một nút trung gian `k`, khoảng cách và nút tiếp theo sẽ được cập nhật. Nếu đường đi là một chu trình âm, thuật toán sẽ ngắt và không nhận đường đi đó.
 
 ### 3. **Tái tạo đường đi (Hàm `reconstruct_path`)**
 - Tái tạo đường đi ngắn nhất giữa hai nút `u` và `v` bằng cách sử dụng ma trận `next`.
