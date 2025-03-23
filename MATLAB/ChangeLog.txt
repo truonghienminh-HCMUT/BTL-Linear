@@ -1,0 +1,30 @@
+## Changelog 1 ##
+
+*What have done*
+- Create app.
+- Create some basic features: Panel (Reset, Calculate, Create table, Input rows and columns fields); Two matrices; graph.
+
+*Known bugs*
+- Calculate and Reset buttons still have some bugs.
+- Input.txt file still have some issues in displaying numbers.
+
+*To-do*
+- Fix bugs.
+
+----------------------------------
+
+## Changelog 2 ##
+
+*What have done*
+- Fix some bugs in Calculate and Reset buttons.
+- Merge two input rows and columns fields into one.
+- Can plot graphs with correct vertices.
+- Input and Output matrices are more stable.
+
+*Known bugs*
+- The plotted graph still have some weird weight and edges.
+
+*To-do*
+- Connect with C++.
+- Standardize input and output.txt.
+- Fix bugs.
