@@ -1,3 +1,7 @@
 Floyd-Warshall Algorithm for directed graph.
-Negative cycle detected. (Value: -13)
-Negative cycle detected. (Value: -28)
+Matrix of shortest distances:
+-9 -20 -13 -6 -28 
+-6 -17 -10 -3 -25 
+-13 -24 -17 -10 -32 
+-12 -23 -16 -9 -31 
+-15 -26 -19 -12 -34 

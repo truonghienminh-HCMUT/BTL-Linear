@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// #define TEST_CASE
 #define pb push_back
 #define int long long
 #define FOR(i, a, b) for(auto i = a; i < b; i++)
@@ -67,7 +68,7 @@ void floyd_warshall(int n, vector<vector<int>>& dist, vector<vector<int>>& next)
                 }
             }
         }
-    }
+    }   
     
 }
 
@@ -98,6 +99,18 @@ signed main(){
 
     int t, u, v;
     cout << "Floyd-Warshall Algorithm for " << (mode == 0 ? "undirected" : "directed") << " graph.\n";
+    cout << "Matrix of shortest distances:\n";
+    FOR(i, 1, n + 1){
+        FOR(j, 1, n + 1){
+            if (dist[i][j] == INF)
+                cout << "INF ";
+            else
+                cout << dist[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    #ifdef TEST_CASE
     cin >> t;
     while (t--){
         cin >> u >> v;
@@ -115,6 +128,7 @@ signed main(){
             cout << endl;
         }
     }
+    #endif
 
     return 0;
 }
