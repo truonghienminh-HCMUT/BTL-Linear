@@ -21,5 +21,5 @@ Matrix of shortest distances:
 
    10 -INF -INF -INF  INF  INF -INF -INF -INF -INF -INF
 
-Path from 5 to 3 is affected by a negative cycle.
-No path from 2 to 4.
+- Path from 5 to 3 is affected by a negative cycle.
+- No path from 2 to 4.

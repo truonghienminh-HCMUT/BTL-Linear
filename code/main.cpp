@@ -145,15 +145,15 @@ signed main(){
             }
         }
         if (neg)
-            cout << "Path from " << u << " to " << v << " is affected by a negative cycle.\n";
+            cout << "- Path from " << u << " to " << v << " is affected by a negative cycle.\n";
         else if (dist[u][v] == INF)
-            cout << "No path from " << u << " to " << v << ".\n";
+            cout << "- No path from " << u << " to " << v << ".\n";
         else{
-            cout << "Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
+            cout << "- Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
             cout << "Path: ";
             vector<int> path = reconstruct_path(u, v, next);
             for (int node : path){
-                cout << node << " ";
+                cout << node << " -> ";
             }
             cout << endl;
         }
