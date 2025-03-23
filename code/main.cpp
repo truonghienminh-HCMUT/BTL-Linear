@@ -151,9 +151,16 @@ signed main(){
         else{
             cout << "- Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
             cout << "Path: ";
+            if (u == v){
+                cout << u << endl;
+                continue;
+            }
             vector<int> path = reconstruct_path(u, v, next);
-            for (int node : path){
-                cout << node << " -> ";
+            FOR(i, 0, path.size()){
+                cout << path[i];
+                if (i < path.size() - 1) {
+                    cout << " -> ";
+                }
             }
             cout << endl;
         }
