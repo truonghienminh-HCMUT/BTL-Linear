@@ -76,18 +76,18 @@ Dữ liệu đầu vào từ file `input.txt`:
    - Các nút không kết nối trực tiếp được gán giá trị `INF`.
    - Đường đi từ một nút đến chính nó được gán giá trị `0`.
 
-3. **Kết quả sau khi chạy Floyd-Warshall**:
-   - Ma trận khoảng cách ngắn nhất:
-     ```
-     Floyd-Warshall Algorithm for directed graph.
-     Matrix of shortest distances:
-        i\j    1    2    3    4    5
-          1 -INF -INF -INF -INF -INF
-          2 -INF -INF -INF -INF -INF
-          3 -INF -INF -INF -INF -INF
-          4  INF  INF  INF    0    4
-          5  INF  INF  INF  INF    0
-     ```
+  - Ma trận khoảng cách ngắn nhất:
+<div align="center">
+
+  | i\j |   1   |   2   |   3   |   4   |   5   |
+  |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+  |  1   | -INF  | -INF  | -INF  | -INF  | -INF  |
+  |  2   | -INF  | -INF  | -INF  | -INF  | -INF  |
+  |  3   | -INF  | -INF  | -INF  | -INF  | -INF  |
+  |  4   |  INF  |  INF  |  INF  |   0   |   4   |
+  |  5   |  INF  |  INF  |  INF  |  INF  |   0   |
+
+</div>
 
 4. **Truy vấn**:
    - Truy vấn: Tìm đường đi ngắn nhất từ nút `4` đến nút `5`.
@@ -108,6 +108,10 @@ Matrix of shortest distances:
 Shortest distance from 4 to 5: 4
 Path: 4 5
 ```
+<br>
+<div align="center">
+<img src="Images/graph.png"/>
+</div>
 
 --- 
 
