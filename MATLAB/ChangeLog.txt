@@ -23,6 +23,7 @@
 
 *Known bugs*
 - The plotted graph still have some weird weight and edges.
+- Users can modify Output matrix.
 
 *To-do*
 - Connect with C++.
