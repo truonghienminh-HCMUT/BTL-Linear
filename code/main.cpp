@@ -1,11 +1,10 @@
-// TEST PASSED: code/main.cpp
-
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
-// #define TEST_CASE
+#define TEST_CASE
 #define pb push_back
 #define int long long
 #define FOR(i, a, b) for(auto i = a; i < b; i++)
@@ -27,6 +26,7 @@ vector<pair<int, int>> adj[maxn];
     next: next matrix
     t: number of queries
     u, v: query vertices
+    neg_cycle: boolean array to check if a vertex is affected by a negative cycle
 */
 
 void inp(){
@@ -97,27 +97,57 @@ signed main(){
 
     floyd_warshall(n, dist, next);
 
+    vector<bool> neg_cycle(n + 1, false);
+    FOR(i, 1, n + 1) {
+        if (dist[i][i] < 0) {
+            neg_cycle[i] = true;
+        }
+    }
+
     int t, u, v;
     cout << "Floyd-Warshall Algorithm for " << (mode == 0 ? "undirected" : "directed") << " graph.\n";
     cout << "Matrix of shortest distances:\n";
+    cout << setw(5) << "i\\j";
+    FOR(i, 1, n + 1)
+        cout << setw(5) << i;
+    
     FOR(i, 1, n + 1){
+        cout << endl << setw(5) << i;
         FOR(j, 1, n + 1){
             if (dist[i][j] == INF)
-                cout << "INF ";
-            else
-                cout << dist[i][j] << " ";
+                cout << setw(5) << "INF";
+            else {
+                bool flag = false;
+                FOR(k, 1, n + 1) {
+                    if (neg_cycle[k] && dist[i][k] != INF && dist[k][j] != INF) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag)
+                    cout << setw(5) << "-INF";
+                else
+                    cout << setw(5) << dist[i][j];
+            }
         }
         cout << endl;
     }
-
+    cout << '\n';
     #ifdef TEST_CASE
     cin >> t;
     while (t--){
         cin >> u >> v;
-        if (dist[u][v] == INF)
+        bool neg = false;
+        FOR(k, 1, n + 1) {
+            if (neg_cycle[k] && dist[u][k] != INF && dist[k][v] != INF) {
+                neg = true;
+                break;
+            }
+        }
+        if (neg)
+            cout << "Path from " << u << " to " << v << " is affected by a negative cycle.\n";
+        else if (dist[u][v] == INF)
             cout << "No path from " << u << " to " << v << ".\n";
-        else if (dist[u][v] < 0)
-            cout << "Negative cycle detected. " << "(Value: " << dist[u][v] << ")\n";
         else{
             cout << "Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
             cout << "Path: ";
