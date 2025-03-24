@@ -29,3 +29,11 @@
 - Connect with C++.
 - Standardize input and output.txt.
 - Fix bugs.
+
+----------------------------------
+
+## Changelog 2.1 ##
+
+*Known bugs*
+- Wrong matrix.
+- Can only input from 0 to 9.
