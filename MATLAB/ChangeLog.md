@@ -62,3 +62,10 @@
 - Highlight the shortest path from vertix A to B.
 - Find bugs.
 - Make a how-to-use screen when run the app. (Optional)
+
+----------------------------------
+
+## Changelog 3.1 ##
+
+*What have done:*
+- Fixed the bug of only plotting not enough of vertices in some scenarios.
