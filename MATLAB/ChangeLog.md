@@ -68,4 +68,4 @@
 ## Changelog 3.1 ##
 
 *What have done:*
-- Fixed the bug of only plotting not enough of vertices in some scenarios.
+- Fixed the bug of plotting not enough of vertices in some scenarios.
