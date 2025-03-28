@@ -7,14 +7,14 @@ Chương trình này triển khai thuật toán **Floyd-Warshall** để tìm đ
 
 ## Các thành phần chính
 
-### 1. **Xử lý đầu vào (`inp` function)**
+### 1. **Xử lý đầu vào (`inp`)**
 - Đọc số lượng nút (`n`), số lượng cạnh (`m`), và chế độ đồ thị (`mode`):
   - `mode = 0`: Đồ thị vô hướng.
   - `mode = 1`: Đồ thị có hướng.
 - Đọc `m` cạnh, mỗi cạnh được định nghĩa bởi hai nút (`x`, `y`) và trọng số (`w`).
-- Lưu các cạnh vào danh sách kề `adj`.
+- Lưu các cạnh vào danh sách kề `adj`. Nếu đồ thị vô hướng (`mode == 0`), thêm cả cạnh ngược.
 
-### 2. **Thuật toán Floyd-Warshall (`floyd_warshall` function)**
+### 2. **Thuật toán Floyd-Warshall (`floyd_warshall`)**
 - Khởi tạo hai ma trận 2D:
   - `dist[i][j]`: Lưu khoảng cách ngắn nhất từ nút `i` đến nút `j`. Giá trị ban đầu là:
     - `0` nếu `i == j`.
@@ -24,23 +24,18 @@ Chương trình này triển khai thuật toán **Floyd-Warshall** để tìm đ
 - Lặp qua tất cả các cặp nút và cập nhật khoảng cách ngắn nhất qua nút trung gian `k`:
   - Nếu tìm thấy đường đi ngắn hơn qua `k`, cập nhật `dist[i][j]` và `next[i][j]`.
 
-### 3. **Xử lý chu trình âm**
-- Sau khi chạy Floyd-Warshall, kiểm tra các nút bị ảnh hưởng bởi chu trình âm:
-  - Nếu `dist[i][i] < 0`, nút `i` nằm trong chu trình âm.
-  - Đánh dấu các nút bị ảnh hưởng để xử lý trong các truy vấn.
-
-### 4. **Tái tạo đường đi (`reconstruct_path` function)**
+### 3. **Tái tạo đường đi (`reconstruct_path`)**
 - Tái tạo đường đi ngắn nhất giữa hai nút `u` và `v` bằng cách sử dụng ma trận `next`.
 - Nếu không có đường đi, trả về danh sách rỗng.
-- Nếu đường đi bị ảnh hưởng bởi chu trình âm, thông báo cho người dùng.
+- Nếu `u == v`, trả về chính nút `u`.
 
-### 5. **Hàm chính**
+### 4. **Hàm chính**
 - Đọc đầu vào và khởi tạo các ma trận `dist` và `next`.
 - Chạy thuật toán Floyd-Warshall để tính toán đường đi ngắn nhất.
-- In ma trận khoảng cách ngắn nhất, xử lý các truy vấn, và in kết quả:
-  - Khoảng cách ngắn nhất giữa hai nút.
-  - Đường đi được tái tạo nếu tồn tại.
-  - Thông báo nếu đường đi bị ảnh hưởng bởi chu trình âm.
+- Xử lý các truy vấn từ người dùng:
+  - In khoảng cách ngắn nhất giữa hai nút.
+  - In đường đi được tái tạo nếu tồn tại.
+  - Nếu phát hiện chu trình âm, in thông báo và giá trị chu trình âm.
 
 ---
 
@@ -49,71 +44,68 @@ Chương trình này triển khai thuật toán **Floyd-Warshall** để tìm đ
 ### Đầu vào
 Dữ liệu đầu vào từ file `input.txt`:
 ```
-5 5 1
-1 2 -1
-2 3 -5
-3 1 4
-2 4 7
-4 5 4
-1
-4 5
+10 14 1
+5 1 4
+5 2 2
+1 3 5
+2 1 -1
+2 3 4
+3 6 2
+4 6 -3
+6 7 1
+7 2 5
+8 9 -5
+9 10 -6
+10 8 3
+9 3 11
+5 8 6
+2
+5 5
+2 6
 ```
 
 ### Phân tích
 1. **Biểu diễn đồ thị**:
-   - Số nút: 5
-   - Số cạnh: 5
+   - Số nút: 10
+   - Số cạnh: 14
    - Đồ thị có hướng (`mode = 1`).
    - Các cạnh:
-     - (1 → 2, -1)
-     - (2 → 3, -5)
-     - (3 → 1, 4)
-     - (2 → 4, 7)
-     - (4 → 5, 4)
+     - (5 → 1, 4), (5 → 2, 2), (1 → 3, 5), (2 → 1, -1), (2 → 3, 4)
+     - (3 → 6, 2), (4 → 6, -3), (6 → 7, 1), (7 → 2, 5), (8 → 9, -5)
+     - (9 → 10, -6), (10 → 8, 3), (9 → 3, 11), (5 → 8, 6)
 
 2. **Ma trận khoảng cách ban đầu**:
    - Các cạnh trực tiếp được khởi tạo với trọng số tương ứng.
    - Các nút không kết nối trực tiếp được gán giá trị `INF`.
    - Đường đi từ một nút đến chính nó được gán giá trị `0`.
 
-  - Ma trận khoảng cách ngắn nhất:
-<div align="center">
-
-  | i\j |   1   |   2   |   3   |   4   |   5   |
-  |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-  |  1   | -INF  | -INF  | -INF  | -INF  | -INF  |
-  |  2   | -INF  | -INF  | -INF  | -INF  | -INF  |
-  |  3   | -INF  | -INF  | -INF  | -INF  | -INF  |
-  |  4   |  INF  |  INF  |  INF  |   0   |   4   |
-  |  5   |  INF  |  INF  |  INF  |  INF  |   0   |
-
-</div>
-
-4. **Truy vấn**:
-   - Truy vấn: Tìm đường đi ngắn nhất từ nút `4` đến nút `5`.
-     - Khoảng cách: `4`.
-     - Đường đi: `4 → 5`.
+3. **Truy vấn**:
+   - Truy vấn 1: Tìm đường đi ngắn nhất từ nút `5` đến nút `5`.
+     - Khoảng cách: `0`.
+     - Đường đi: `5`.
+   - Truy vấn 2: Tìm đường đi ngắn nhất từ nút `2` đến nút `6`.
+     - Khoảng cách: `6`.
+     - Đường đi: `2 → 3 → 6`.
 
 ### Đầu ra
+Dữ liệu đầu ra từ file `output.txt`:
 ```
-Floyd-Warshall Algorithm for directed graph.
-Matrix of shortest distances:
-    i\j    1    2    3    4    5
-      1 -INF -INF -INF -INF -INF
-      2 -INF -INF -INF -INF -INF
-      3 -INF -INF -INF -INF -INF
-      4  INF  INF  INF    0    4
-      5  INF  INF  INF  INF    0
+0   13    5  INF  INF    7    8  INF  INF  INF
+   -1    0    4  INF  INF    6    7  INF  INF  INF
+    7    8    0  INF  INF    2    3  INF  INF  INF
+    2    3    7    0  INF   -3   -2  INF  INF  INF
+ -INF -INF -INF  INF    0 -INF -INF -INF -INF -INF
+    5    6   10  INF  INF    0    1  INF  INF  INF
+    4    5    9  INF  INF   11    0  INF  INF  INF
+ -INF -INF -INF  INF  INF -INF -INF -INF -INF -INF
+ -INF -INF -INF  INF  INF -INF -INF -INF -INF -INF
+ -INF -INF -INF  INF  INF -INF -INF -INF -INF -INF
 
-Shortest distance from 4 to 5: 4
-Path: 4 5
+5
+2 3 6
 ```
-<br>
-<div align="center">
-<img src="Images/graph.png"/>
-</div>
 
---- 
+---
 
 ## Độ phức tạp
 
