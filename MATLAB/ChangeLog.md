@@ -69,3 +69,29 @@
 
 *What have done:*
 - Fixed the bug of plotting not enough of vertices in some scenarios.
+
+----------------------------------
+
+## Changelog 4.0 ##
+
+*What have done:*
+- Make some adjustments in UI:
+  + Delete the Error boxfield.
+  + Add the drop down for chosing the head and tail of the shortest path.
+  + Add the "Weight of the shortest path" and "Shortest path" under the graph.
+
+- Create new information window when user have wrong interating (input, button) with the program.
+- Change the logic of the buttons for better experience.
+- The output matrix is available, but still unstable.
+
+*Known bugs:*
+- Some information windows still not appear.
+- ...
+
+*To-do:*
+- Standardize output.txt.
+- Highlight the shortest path from vertix A to B.
+- Finish the information window feature.
+- Finish "Weight of the shortest path" and "Shortest path".
+- Find bugs.
+- Make a how-to-use screen when run the app. (Optional)
