@@ -105,14 +105,14 @@ signed main(){
     }
 
     int t, u, v;
-    cout << "Floyd-Warshall Algorithm for " << (mode == 0 ? "undirected" : "directed") << " graph.\n";
-    cout << "Matrix of shortest distances:\n";
-    cout << setw(5) << "i\\j";
-    FOR(i, 1, n + 1)
-        cout << setw(5) << i;
+    // cout << "Floyd-Warshall Algorithm for " << (mode == 0 ? "undirected" : "directed") << " graph.\n";
+    // cout << "Matrix of shortest distances:\n";
+    // cout << setw(5) << "i\\j";
+    // FOR(i, 1, n + 1)
+    //     cout << setw(5) << i;
     
     FOR(i, 1, n + 1){
-        cout << endl << setw(5) << i;
+        // cout << endl << setw(5) << i;
         FOR(j, 1, n + 1){
             if (dist[i][j] == INF)
                 cout << setw(5) << "INF";
