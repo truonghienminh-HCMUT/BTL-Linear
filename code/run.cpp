@@ -149,18 +149,13 @@ signed main(){
         else if (dist[u][v] == INF)
             cout << "- No path from " << u << " to " << v << ".\n";
         else{
-            cout << "- Shortest distance from " << u << " to " << v << ": " << dist[u][v] << endl;
-            cout << "Path: ";
             if (u == v){
                 cout << u << endl;
                 continue;
             }
             vector<int> path = reconstruct_path(u, v, next);
             FOR(i, 0, path.size()){
-                cout << path[i];
-                if (i < path.size() - 1) {
-                    cout << " -> ";
-                }
+                cout << path[i] << " ";
             }
             cout << endl;
         }

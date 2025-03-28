@@ -21,7 +21,5 @@ Matrix of shortest distances:
 
    10 -INF -INF -INF  INF  INF -INF -INF -INF -INF -INF
 
-- Shortest distance from 5 to 5: 0
-Path: 5
-- Shortest distance from 2 to 6: 6
-Path: 2 -> 3 -> 6
+5
+2 3 6 
