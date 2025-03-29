@@ -95,3 +95,27 @@
 - Finish "Weight of the shortest path" and "Shortest path".
 - Find bugs.
 - Make a how-to-use screen when run the app. (Optional)
+
+
+----------------------------------
+
+## Changelog 5.0 ##
+
+*What have done:*
+- Add a plot graph button.
+- Can highlight the shortest path.
+- The output matrix is now more stable.
+- Adjust the logic of the buttons.
+
+*Known bugs:*
+- Some information windows still not appear.
+- The vertices is not able to be highlighted.
+- The Plot graph, Create table and Calculate buttons are now unstable due to the new adjustment.
+- ...
+
+*To-do:*
+- Connect with C++.
+- Plot multiple shortest path without click the reset button.
+- Finish the information window feature.
+- Fix bugs.
+- Make a how-to-use screen when run the app. (Optional)
