@@ -139,3 +139,10 @@
 - Finish the information window feature.
 - Fix bugs.
 - Make a how-to-use screen when run the app. (Optional)
+
+----------------------------------
+
+## Changelog 6.1 ##
+
+*What have done:*
+- Adjust input.txt.
