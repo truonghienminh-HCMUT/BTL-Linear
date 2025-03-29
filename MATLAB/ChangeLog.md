@@ -119,3 +119,23 @@
 - Finish the information window feature.
 - Fix bugs.
 - Make a how-to-use screen when run the app. (Optional)
+
+----------------------------------
+
+## Changelog 6.0 ##
+
+*What have done:*
+- Fix bugs.
+- Almost all the features are now stable.
+- Can now highlight the vertices
+
+*Known bugs:*
+- Some information windows still not appear.
+- ...
+
+*To-do:*
+- Connect with C++.
+- Plot multiple shortest path without clicking the reset button.
+- Finish the information window feature.
+- Fix bugs.
+- Make a how-to-use screen when run the app. (Optional)
