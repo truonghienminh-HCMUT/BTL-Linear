@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#define TEST_CASE
+#define TEST_CASE 
 #define pb push_back
 #define int long long
 #define FOR(i, a, b) for(auto i = a; i < b; i++)
@@ -115,7 +115,7 @@ signed main(){
         // cout << endl << setw(5) << i;
         FOR(j, 1, n + 1){
             if (dist[i][j] == INF)
-                cout << setw(5) << "INF";
+                cout << setw(5) <<  "INF";
             else {
                 bool flag = false;
                 FOR(k, 1, n + 1) {
@@ -134,7 +134,8 @@ signed main(){
     }
     cout << '\n';
     #ifdef TEST_CASE
-    cin >> t;
+    // cin >> t;
+    t = 1;
     while (t--){
         cin >> u >> v;
         bool neg = false;
@@ -145,9 +146,11 @@ signed main(){
             }
         }
         if (neg)
-            cout << "- Path from " << u << " to " << v << " is affected by a negative cycle.\n";
+            // cout << "- Path from " << u << " to " << v << " is affected by a negative cycle.\n";
+            cout << "-INF\n";
         else if (dist[u][v] == INF)
-            cout << "- No path from " << u << " to " << v << ".\n";
+            // cout << "- No path from " << u << " to " << v << ".\n";
+            cout << "INF\n";
         else{
             if (u == v){
                 cout << u << endl;
