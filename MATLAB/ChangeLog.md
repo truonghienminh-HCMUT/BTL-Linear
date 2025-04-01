@@ -146,3 +146,17 @@
 
 *What have done:*
 - Adjust input.txt.
+
+----------------------------------
+
+## Changelog 6.2 ##
+
+*What have done:*
+- Connect with C++. Final will be in \Merge.
+
+----------------------------------
+
+## Changelog 6.3 ##
+
+*What have done:*
+- Fix some bugs.
