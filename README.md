@@ -1,5 +1,5 @@
 # BTL-Linear
-<h2>Đây là repository chứa những file phục vụ cho bài tập lớn môn Đại Số Tuyến Tính của thầy Nguyễn Hữu Hiệp. (HCMUT)   </h2>
+<h2>Đây là repository chứa những file phục vụ cho bài tập lớn môn Đại số Tuyến tính (MT1007) của thầy Nguyễn Hữu Hiệp. (HCMUT)   </h2>
 <div align="center">
     <a href="https://github.com/truonghienminh-HCMUT/BTL-Linear">
     <img src="https://img.shields.io/github/last-commit/truonghienminh-HCMUT/BTL-Linear?style=for-the-badge&logo=github&logoColor=white"
