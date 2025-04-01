@@ -160,3 +160,13 @@
 
 *What have done:*
 - Fix some bugs.
+
+----------------------------------
+
+## Changelog 6.4 ##
+
+*What have done:*
+-Change logic in some buttons.
+
+*Known bugs:*
+- Can't show when there's no shortest path.
