@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 #include <iomanip>
 
@@ -145,9 +145,11 @@ signed main(){
             }
         }
         if (neg)
-            cout << "- Path from " << u << " to " << v << " is affected by a negative cycle.\n";
+            //cout << "- Path from " << u << " to " << v << " is affected by a negative cycle.\n";
+            cout << "Tồn tại chu trình âm.\n";
         else if (dist[u][v] == INF)
-            cout << "- No path from " << u << " to " << v << ".\n";
+            //cout << "- No path from " << u << " to " << v << ".\n";
+            cout << "Không tồn tại đường đi từ " << u << " đến " << v << ".\n";
         else{
             if (u == v){
                 cout << u << endl;
