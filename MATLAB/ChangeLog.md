@@ -170,3 +170,11 @@
 
 *Known bugs:*
 - Can't show when there's no shortest path.
+
+----------------------------------
+
+## Changelog 7.0 ##
+## Final release 1.0 ##
+
+- The app is now stable.
+- Need to find bugs if available to make the app more stable.
