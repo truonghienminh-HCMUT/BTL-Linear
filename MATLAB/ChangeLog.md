@@ -95,3 +95,86 @@
 - Finish "Weight of the shortest path" and "Shortest path".
 - Find bugs.
 - Make a how-to-use screen when run the app. (Optional)
+
+
+----------------------------------
+
+## Changelog 5.0 ##
+
+*What have done:*
+- Add a plot graph button.
+- Can highlight the shortest path.
+- The output matrix is now more stable.
+- Adjust the logic of the buttons.
+
+*Known bugs:*
+- Some information windows still not appear.
+- The vertices is not able to be highlighted.
+- The Plot graph, Create table and Calculate buttons are now unstable due to the new adjustment.
+- ...
+
+*To-do:*
+- Connect with C++.
+- Plot multiple shortest path without click the reset button.
+- Finish the information window feature.
+- Fix bugs.
+- Make a how-to-use screen when run the app. (Optional)
+
+----------------------------------
+
+## Changelog 6.0 ##
+
+*What have done:*
+- Fix bugs.
+- Almost all the features are now stable.
+- Can now highlight the vertices
+
+*Known bugs:*
+- Some information windows still not appear.
+- ...
+
+*To-do:*
+- Connect with C++.
+- Plot multiple shortest path without clicking the reset button.
+- Finish the information window feature.
+- Fix bugs.
+- Make a how-to-use screen when run the app. (Optional)
+
+----------------------------------
+
+## Changelog 6.1 ##
+
+*What have done:*
+- Adjust input.txt.
+
+----------------------------------
+
+## Changelog 6.2 ##
+
+*What have done:*
+- Connect with C++. Final will be in \Merge.
+
+----------------------------------
+
+## Changelog 6.3 ##
+
+*What have done:*
+- Fix some bugs.
+
+----------------------------------
+
+## Changelog 6.4 ##
+
+*What have done:*
+-Change logic in some buttons.
+
+*Known bugs:*
+- Can't show when there's no shortest path.
+
+----------------------------------
+
+## Changelog 7.0 ##
+## Final release 1.0 ##
+
+- The app is now stable.
+- Need to find bugs if available to make the app more stable.
