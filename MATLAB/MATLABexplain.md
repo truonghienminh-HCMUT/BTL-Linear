@@ -2,7 +2,7 @@ GIẢI THÍCH CODE MATLAB
 
 # 1. Khai báo các nút, ô, đồ thị, khối,... trong app
 
-'''
+```
 classdef Linear < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -41,14 +41,13 @@ classdef Linear < matlab.apps.AppBase
         Name                     matlab.ui.control.Label
         Group                    matlab.ui.control.Label
     end
-
-'''
+```
 
 # 2. Các lệnh được sử dụng trong các thành phần của app
 
 ## 2.1. Nút Undirected:
 
-'''
+```
 function UndirectedButtonPushed(app, event)
     app.DirectedButton.Enable="off";
     app.ResetButton.Enable="on";
@@ -76,13 +75,13 @@ function DirectedButtonPushed(app, event)
 
     app.DirectedButton.BackgroundColor=[0.07,0.62,1.00];
 end
-'''
+```
 
 Các lệnh trong nút Directed sẽ có chức năng tương tự như nút Undirected
 
 ## 2.3. Nút Reset
 
-'''
+```
 function ResetButtonPushed(app, event)
     app.UndirectedButton.Enable="on";
     app.DirectedButton.Enable="on";
@@ -112,13 +111,13 @@ function ResetButtonPushed(app, event)
 
     cla(app.UIAxes,'reset')
 end
-'''
+```
 
 Sau khi nhấn nút Reset, chương trình sẽ quay về trạng thái ban đầu
 
 ## 2.4. Nút CreateTable
 
-'''
+```
 function CreateTableButtonPushed(app, event)
     fig=app.UIFigure;
     if app.DirectedButton.Enable=="on"
@@ -184,7 +183,7 @@ function CreateTableButtonPushed(app, event)
     app.OutputTable.Enable = "off";
     app.OutputTable.Enable="inactive";
 end
-'''
+```
 
 Sau khi nhấn nút CreateTable, chương trình sẽ dựa vào số đỉnh và số cạnh từ người dùng nhập để tạo ma trận nhập số liệu. Nếu dữ liệu nhập nằm trong các trường hợp lỗi, chương trình sẽ thông báo những lỗi như sau:
 - Số đỉnh phải là số nguyên dương
@@ -193,7 +192,7 @@ Sau khi nhấn nút CreateTable, chương trình sẽ dựa vào số đỉnh v�
 
 ## 2.5. Nút Calculate
 
-'''
+```
 function CalculateButtonPushed(app, event)
     app.CalculateButton.Enable="off";
     fig = app.UIFigure;          
@@ -283,13 +282,13 @@ function CalculateButtonPushed(app, event)
     end
 
 end
-'''
+```
 
 Chương trình sẽ chạy chương trình C++, lấy dữ liệu được xuất ra từ file output.txt và tiến hành vẽ đồ thị cũng như xuất kết quả vào ô kết quả
 
 ## 2.6. Nút Confirm
 
-'''
+```
 function ConfirmButtonPushed(app, event)
     fig = app.UIFigure;
     data = app.InputTable.Data;
@@ -340,14 +339,14 @@ function ConfirmButtonPushed(app, event)
     app.ConfirmButton.Enable="off";
     app.CalculateButton.Enable="on";
 end
-'''
+```
 
 Sau khi nhấn vào nút Confirm, chương trình sẽ kiểm tra lỗi trong dữ liệu nhập của người dùng, nếu không có lỗi, chương trình sẽ tạo file input.txt dùng để chạy tiếp C++ khi nhấn nút Calculate
 
 
 ## 2.7. Nút PlotGraph
 
-'''
+```
 function PlotGraphButtonPushed(app, event)
     app.HeadDropDown.Enable="on";
     app.TailDropDown.Enable="on";
@@ -380,13 +379,13 @@ function PlotGraphButtonPushed(app, event)
                                 
     plot(app.UIAxes, G, 'EdgeLabel', G.Edges.Weight);
 end
-'''
+```
 
 Sau khi nhấn vào nút PlotGraph, chương trình sẽ phát họa được đồ thị (chưa có đường đi ngắn nhất) từ những dữ liệu người dùng nhập trong chương trình.
 
 # 3. Khai báo các tính chất của những thành phần xuất hiện trong app
 
-'''
+```
     % Component initialization
     methods (Access = private)
 
@@ -611,4 +610,4 @@ Sau khi nhấn vào nút PlotGraph, chương trình sẽ phát họa được đ
             app.UIFigure.Visible = 'on';
         end
     end
-'''
+```
