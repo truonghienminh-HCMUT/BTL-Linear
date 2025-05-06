@@ -21,7 +21,7 @@ Chủ đề: Thuật toán **Floyd - Warshall** tìm đường đi ngắn nhất
 - Slide thuyết trình: Canva.
 - Kích thước: Lề trái 30, phải 20, trên 25, dưới 25 (mm). Font chữ 13pt.
 - **Hình thức nộp:** Online, chuyển file sang .PDF rồi up lên LMS. Đặt tên file theo mẫu __DSTT_L03_nhom04.pdf__ (nếu cập nhật file mới thì đặt tên lại __DSTT_L03_nhom04_new1.pdf__, __DSTT_L03_nhom04_new2.pdf__...)
-<div align="center"><h2>⚡Hạn nộp: Hết ngày 05/05/2025⚡</h2></div>
+<div align="center"><h2>⚡Hạn nộp: Hết ngày 20/05/2025⚡</h2></div>
 
 Sản phẩm:
 - Ngôn ngữ lập trình: C++.
